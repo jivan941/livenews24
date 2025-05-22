@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>USA Health & Trending News</title>
+  <title>Live News by Topic - USA | Health | World</title>
+  <meta name="description" content="Get live news with images by topic. USA, Health, Technology, India. Auto-updated feed.">
+  <meta name="keywords" content="live news, health tips, usa news, india news, trending topics, technology news">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>USA Health & Trending News</h1>
+    <h1>Live Trending News</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search news topic e.g. technology, india, health..." />
+      <button onclick="loadNews()">Search</button>
+    </div>
   </header>
 
-  <main id="news-container">
-    Loading news...
-  </main>
+  <main id="news-container">Loading news...</main>
 
   <footer>
-    <p>&copy; 2025 Health News Daily</p>
+    <p>&copy; 2025 NewsHub by You</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
