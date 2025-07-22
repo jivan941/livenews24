@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Get Reward</title>
-  <style>
-    body {
-      background-color: #fff;
-      font-family: sans-serif;
-      text-align: center;
-      padding-top: 100px;
-    }
-
-    .click-btn {
-      font-size: 24px;
-      padding: 15px 40px;
-      background-color: #27ae60;
-      color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    }
-
-    .click-btn:hover {
-      background-color: #219150;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Video Upscaler</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>AI Video Upscaler</h1>
+            <p>Enhance your videos to HD or 4K quality using AI</p>
+        </header>
 
-  <h1>🎁 Claim Your Reward</h1>
-  <p>Click the button below to continue:</p>
-  <button class="click-btn" onclick="window.location.href='https://wwp.hoqodd.com/redirect-zone/2afb3756'">Click Here</button>
+        <main>
+            <div class="upload-section" id="uploadSection">
+                <div class="dropzone" id="dropzone">
+                    <i class="fas fa-video"></i>
+                    <h3>Upload Your Video</h3>
+                    <p>Drag & drop your video file here or click to browse</p>
+                    <input type="file" id="fileInput" accept="video/*">
+                    <button class="browse-btn">Browse Files</button>
+                </div>
+                <div class="file-info" id="fileInfo"></div>
+            </div>
 
+            <div class="settings-section">
+                <h3>Upscaling Options</h3>
+                <div class="settings-grid">
+                    <div class="setting">
+                        <label for="scaleFactor">Scale Factor</label>
+                        <select id="scaleFactor">
+                            <option value="2">2x (HD)</option>
+                            <option value="4">4x (4K)</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="model">AI Model</label>
+                        <select id="model">
+                            <option value="basic">Basic Enhancement</option>
+                            <option value="advanced">Advanced Super-Resolution</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="upscaleBtn" class="upscale-btn" disabled>
+                    <i class="fas fa-magic"></i> Upscale Video
+                </button>
+            </div>
+
+            <div class="result-section hidden" id="resultSection">
+                <h3>Upscaled Result</h3>
+                <div class="result-container">
+                    <video id="resultVideo" controls></video>
+                    <div class="result-info">
+                        <p id="resultInfo"></p>
+                        <button id="downloadBtn" class="download-btn">
+                            <i class="fas fa-download"></i> Download Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-section hidden" id="progressSection">
+                <h3>Processing Your Video</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <span id="progressText">0%</span>
+                </div>
+                <p id="statusText">Preparing for upscaling...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>This tool uses open-source AI models. Processing may take several minutes.</p>
+            <p class="credits">Made with ❤️ | Free AI Tools</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
